@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Menu
 {
      internal class Program
@@ -11,17 +12,18 @@ namespace Menu
 
             do
             {
-                //Printa ut menyn som förklarar valen
-                Console.WriteLine("Välkommen till menyn!");
-                Console.WriteLine("Välj mellan alternativen:");
-                Console.WriteLine("[1] - Bio");
-                Console.WriteLine("[2] - Repetera 10");
-                Console.WriteLine("[3] - 3 ord");
-                Console.WriteLine("[Q] - Avsluta");
+                
+                Console.Write("Välkommen till menyn!\n" +
+                    "Välj Mellan alternativen:\n" +
+                    "[1] - Biopriser\n" +
+                    "[2] - Repetera 10\n" +
+                    "[3] - 3 ord\n" +
+                    "[0] - Avsluta\n" +
+                    "Val: ");
 
                 string input = Console.ReadLine();
 
-                //Switch för att välja 
+                 
                 switch (input) 
                 {
                     case "1":
@@ -42,7 +44,7 @@ namespace Menu
                         _show3Words.Display3Words(); 
                         break;
 
-                    case "Q":
+                    case "0":
                         Environment.Exit(0);
                         break;
 
