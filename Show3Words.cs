@@ -4,7 +4,31 @@
     {
         public void Display3Words()
         {
-            Console.WriteLine("3 words go here");
+            //Försökte på en List<string> här först men insåg jag behöver nog lära mig Linq då 
+            //List<string> words = new List<string>();
+
+            Console.Write("Skriv in en mening: ");
+            string input = Console.ReadLine();
+            string[] splitInput = input.Split(' ');
+
+            //Kanske inte den snyggaste lösningen för att kolla efter 3 ord men det får duga!
+            while (splitInput.Length < 3)
+            {
+                Console.WriteLine("Fel fel fel! Skriv minst 3 ord.");
+                input = Console.ReadLine();
+                splitInput = input.Split(' ');
+
+            }
+
+            for (int i = 2;  i < splitInput.Length; i += 3)
+            {
+                Console.Write(splitInput[i] + ", ");
+            }
+            Console.WriteLine("\n");
         }
+
+
+
+        
     }
 }
