@@ -10,7 +10,7 @@
             Console.Write("Skriv in en mening: ");
             string input = Console.ReadLine();
 
-            //hittade denna funktion för multiple spaces, kändes lite överkurs!
+            //hittade denna funktion för multiple spaces, kändes lite överkurs men det funkar!
             string[] splitInput = input.Split(new char[] { ' ' },
                 StringSplitOptions.RemoveEmptyEntries);
 

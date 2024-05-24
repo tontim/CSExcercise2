@@ -7,7 +7,7 @@
             Console.Write("Skriv in något vetja? ");
             string input = Console.ReadLine();
 
-            while (input != null)
+            while (input == null)
             {
                 Console.Write("Nej, skriv något sa jag.");
                 input = Console.ReadLine();
