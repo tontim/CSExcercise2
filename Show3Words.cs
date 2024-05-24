@@ -9,14 +9,18 @@
 
             Console.Write("Skriv in en mening: ");
             string input = Console.ReadLine();
-            string[] splitInput = input.Split(' ');
+
+            //hittade denna funktion för multiple spaces, kändes lite överkurs!
+            string[] splitInput = input.Split(new char[] { ' ' },
+                StringSplitOptions.RemoveEmptyEntries);
 
             //Kanske inte den snyggaste lösningen för att kolla efter 3 ord men det får duga!
             while (splitInput.Length < 3)
             {
                 Console.WriteLine("Fel fel fel! Skriv minst 3 ord.");
                 input = Console.ReadLine();
-                splitInput = input.Split(' ');
+                splitInput = input.Split(new char[] { ' ' },
+                    StringSplitOptions.RemoveEmptyEntries);
 
             }
 
